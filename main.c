@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int *vetores;
     int tam, i;
@@ -23,11 +22,10 @@ int main() {
     printf("\n");
     free(vetores);
     return 0;
-}
-
+ }
     for (int i = 0; i < n; i++) {
         vetor[i] = atoi(argv[i + 2]); 
     }
     free(vetor);
     return 0;
-}
+ }
