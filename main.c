@@ -1,20 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc, char *argv[]) {
-    int n; 
-    int *vetor ; // Ponteiro para o vetor dinâmico
-    if (argc < 2) {
-        return 0; 
+
+int main() {
+    int *vetores;
+    int tam, i;
+    printf( " ");
+    scanf("%d", &tam);
+   vetores = (int *)malloc(tam * sizeof(int));
+    if (vetores == NULL) {
+        printf("Erro na alocação de memória!\n");
+        return 1;
     }
-    n = atoi(argv[1]);
-    
-    if (n == 0) {
-        return 0; 
+         printf( "");
+    for (i = 0; i < tam; i++) {
+        printf(" %d:", i + 1);
+        scanf("%d", &vetores[i]);
     }
-    vetor = (int *)malloc(n * sizeof(int));
-    if (vetor == NULL) {
-        return 1; 
+    printf( "\n");
+    for (i = 0; i < tam; i++) {
+        printf("%d ", vetores[i]);
     }
+    printf("\n");
+    free(vetores);
+    return 0;
+}
+
     for (int i = 0; i < n; i++) {
         vetor[i] = atoi(argv[i + 2]); 
     }
